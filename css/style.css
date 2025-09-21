@@ -1,0 +1,233 @@
+:root {
+  --hero-bg: rgb(248 248 251);
+  --myBlue: #6c7fd8;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/Poppins.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Quicksand Book'), url('../fonts/QS.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Quicksand Bold Oblique';
+    font-style: normal;
+    font-weight: 100;
+    src: url('../fonts/QS-Bold.woff') format('woff');
+}
+
+/* Prevent horizontal scroll */
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+/* Alternatively, target specific problematic elements */
+.container, .xl\:container {
+    max-width: 100%;
+}
+
+/* Fix for the hero section SVG */
+.animate-shape {
+    max-width: 100%;
+}
+
+/* Ensure all elements respect container boundaries */
+* {
+    box-sizing: border-box;
+}
+
+.font-qs {
+  font-family: Quicksand;
+}
+
+.font-qs-bold {
+  font-family: 'Quicksand Bold Oblique';
+}
+
+.font-poppins {
+  font-family: Poppins;
+}
+
+.owl-nav {
+    display: none !important;
+}
+
+.secondMenu {
+  display: none;
+}
+
+.firstMenu:hover ul {
+  display: block;
+}
+
+.hamburgerOpener::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border: 1px solid #3d4750;
+  padding-left: 5px;
+  border-radius: 50%;
+  display: inline-flex;
+  margin-left: 4px;
+  transform: translateY(-1px);
+}
+
+.h::after {
+  content: "";
+  width: 48px;
+  height: 60px;
+  position: absolute;
+  top: -36px;
+  right: -38px;
+  background-image: url("../images/heroTextShape.png");
+}
+
+
+.outlined-text {
+  -webkit-text-stroke: 0.4px rgba(0,0,0, 0.4);
+}
+
+
+.myOwl::before {
+  content: "";
+  position: absolute;
+  background-image: url("../images/top-shape.png");
+  height: 30px;
+  width: 30px;
+  top: -30px;
+  left: 79px;
+}
+
+
+.myOwl::after {
+  content: "";
+  position: absolute;
+  background-image: url("../images/top-shape.png");
+  height: 30px;
+  width: 30px;
+  left: -29px;
+  bottom: -1px;
+}
+
+
+.text-vertical {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  letter-spacing: 10px;
+}
+
+
+.dc::before {
+  transition: all 0.3s ease-in-out;
+  content: "";
+  width: 400px;
+  height: 600px;
+  position: absolute;
+  left: -200px;
+  top: -200px;
+  bottom: 0;
+  rotate: 40deg;
+  z-index: 0;
+}
+
+
+.dc::after {
+  transition: all 0.3s ease-in-out;
+  content: "";
+  width: 150px;
+  height: 300px;
+  position: absolute;
+  right: -70px;
+  bottom: -100px;
+  rotate: 40deg;
+  z-index: 0;
+}
+
+
+.dc:hover::before {
+  width: 380px;
+}
+
+
+.dc:hover::after {
+  width: 130px;
+}
+
+
+.offCard::before {
+  content: "";
+  position: absolute;
+  background-image: url("../images/top-shape.png");
+  height: 30px;
+  width: 30px;
+  top: 196px;
+  left: -29px;
+}
+
+
+.offCard::after {
+  content: "";
+  position: absolute;
+  background-image: url("../images/top-shape.png");
+  height: 30px;
+  width: 30px;
+  bottom: 4px;
+  right: -30px;
+  rotate: 90deg;
+}
+
+
+.topVendor::before {
+  content: "";
+  position: absolute;
+  background-image: url("../images/top-shape.png");
+  height: 30px;
+  width: 30px;
+  top: -29px;
+  right: 2px;
+}
+
+
+.topVendor::after {
+  content: "";
+  position: absolute;
+  background-image: url("../images/top-shape.png");
+  height: 30px;
+  width: 30px;
+  bottom: 3px;
+  left: -29px;
+}
+
+
+.instaIcon {
+  transform: scale(7) rotate(45deg) !important;
+}
+
+
+
+
+@media screen and (min-width: 401px ) and (max-width: 639px){
+  .offCard::before {
+    top: 144px;
+    left: -29px;
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 1279px) {
+  .offCard::before {
+    top: 145px;
+  }
+  .offCard::after {
+    bottom: 3px;
+  }
+}
